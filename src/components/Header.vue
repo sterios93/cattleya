@@ -4,10 +4,31 @@
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-md-10 mx-auto">
-                        <div class="site-heading text-center mt-0 text-white">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                    <div class="col-md-12 ">
+                        <div class="site-heading mt-0 text-white">
+                            <h1>We are investors who turn ideas <br>
+                            into real-life projects.</h1>
+                            <button class="btn">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0">
+                <div class="d-flex justify-content-end col-lg-12 px-0">
+                    <div class="bg-white d-flex col-12 col-md-6">
+                        <div class="row col-12 mx-0">
+                            <div class="d-flex align-items-center col-4">
+                                <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
+                                <p class="mb-0">Finished<br>projects</p>
+                            </div>
+                            <div class="d-flex align-items-center col-4">
+                                <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
+                                <p class="mb-0">Years on the<br>market</p>
+                            </div>
+                            <div class="d-flex align-items-center col-4">
+                                <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
+                                <p class="mb-0">Sold<br>apartments</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -32,7 +53,7 @@
             opacity: 0.5
 
     .site-heading
-        padding: 200px 0 150px
+        padding: 200px 0 0 0
         h1
             font-size: 50px
         .subheading
@@ -42,10 +63,15 @@
             margin: 10px 0 0
             font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
 
+    .stats-numbers
+        font-size 20px
+        color: #9C806B;
     @media only screen and (min-width: 768px)
         .site-heading
-            padding: 200px 0
+            padding: 200px 0 150px 0
             h1
-                font-size: 80px
+                font-size: 45px
+        .stats-numbers
+            font-size 40px
 
 </style>
