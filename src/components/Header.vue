@@ -77,9 +77,9 @@
             opacity: 0.5
 
     .site-heading
-        padding: 200px 0 0 0
+        padding: 250px 0 100px 0
         h1
-            font-size: 50px
+            font-size: 30px
         .subheading
             font-size: 24px
             font-weight: 300
@@ -92,10 +92,13 @@
         color: #9C806B;
     @media only screen and (min-width: 768px)
         .site-heading
-            padding: 200px 0 150px 0
+            padding: 250px 0 100px 0
             h1
                 font-size: 45px
         .stats-numbers
             font-size 40px
+    @media (min-width: 992px)
+        .site-heading
+            padding: 200px 0 100px 0
 
 </style>
