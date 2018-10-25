@@ -15,19 +15,43 @@
             </div>
             <div class="row mx-0">
                 <div class="d-flex justify-content-end col-lg-12 px-0">
-                    <div class="bg-white d-flex col-12 col-md-6">
-                        <div class="row col-12 mx-0">
-                            <div class="d-flex align-items-center col-4">
-                                <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
-                                <p class="mb-0">Finished<br>projects</p>
+                    <div class="bg-white d-flex col-xs-12 col-lg-6">
+                        <div class="row d-flex flex-wrap flex-column flex-sm-row col-12 mx-0">
+                            <div class="d-flex align-items-center
+                             justify-content-center col-xs-12 col-sm-4">
+                                <div class="row d-flex align-items-center
+                                 justify-content-center p-2">
+                                    <div class="col-6 d-flex justify-content-center">
+                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0">Finished<br>projects</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center col-4">
-                                <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
-                                <p class="mb-0">Years on the<br>market</p>
+                            <div class="d-flex align-items-center
+                             justify-content-center col-xs-12 col-sm-4">
+                                <div class="row d-flex align-items-center
+                                 justify-content-center p-2">
+                                    <div class="col-6 d-flex justify-content-center">
+                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0">Years on the<br>market</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center col-4">
-                                <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
-                                <p class="mb-0">Sold<br>apartments</p>
+                            <div class="d-flex align-items-center
+                             justify-content-center col-xs-12 col-sm-4">
+                                <div class="row d-flex align-items-center
+                                 justify-content-center p-2">
+                                    <div class="col-6 d-flex justify-content-center">
+                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="mb-0">Sold<br>apartments</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,7 +88,7 @@
             font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif
 
     .stats-numbers
-        font-size 20px
+        font-size 30px
         color: #9C806B;
     @media only screen and (min-width: 768px)
         .site-heading
