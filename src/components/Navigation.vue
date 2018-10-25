@@ -13,16 +13,19 @@
                     <div class="collapse navbar-collapse" id="hamburgerMenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Home</a>
+                                <a class="nav-link text-white text-center" href="#">Apartments</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">About</a>
+                                <a class="nav-link text-white text-center" href="#">Environment</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Sample Post</a>
+                                <a class="nav-link text-white text-center" href="#">The Project</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Contact</a>
+                                <a class="nav-link text-white text-center" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white text-center" href="#">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -31,6 +34,8 @@
         </div>
 </template>
 
-<style>
-
+<style scoped lang="stylus">
+    @media (max-width: 992px)
+        #hamburgerMenu
+            background: #00000073;
 </style>
