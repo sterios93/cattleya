@@ -5,15 +5,16 @@
 <template>
     <section class="d-flex mt-5 container">
         <div class="row">
-            <div class="col-12 col-sm-12 col-md-6"
-                 v-bind:class="['order-2', { 'order-1' : pictureLeft }]">
-                <img class="mw-100" src="../assets/team.jpg" alt="some photo change it later">
+            <div class="col-12 col-sm-12 col-lg-7 d-flex justify-content-center"
+                 v-bind:class="['order-2', { 'order-1' : picturePosition }]">
+                <img class="mw-100 " src="../assets/team.jpg"
+                     alt="some photo change it later">
             </div>
-            <div class="col-12 col-sm-12 col-md-6 d-flex
-             flex-column justify-content-center align-items-center"
-                 v-bind:class="[ 'order-1', { 'order-2' : pictureLeft }]">
-                <h1>Who are we ? </h1>
-                <p>
+            <div class="col-12 col-sm-12 col-lg-5 d-flex mt-3 mt-lg-0
+             flex-column justify-content-center"
+                 v-bind:class="[ 'order-1', { 'order-2' : picturePosition }]">
+                <h1 class="heading text-center">About us ? </h1>
+                <p >
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type
@@ -24,6 +25,7 @@
                     and more recently with desktop publishing
                     software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
+                    <a href="#" class="blackText">See more</a>
             </div>
         </div>
     </section>
@@ -34,13 +36,34 @@ export default {
   props: ['pictureLeft'],
   data() {
     return {
-      // orderTo: this.order,
+      picturePosition: null,
     };
+  },
+  methods: {
+    attachListeners() {
+      window.addEventListener('resize', () => {
+        this.changePicOrder();
+      });
+    },
+    changePicOrder() {
+      const windowWidth = window.innerWidth;
+      if (windowWidth < 992) this.picturePosition = true;
+      else this.picturePosition = this.pictureLeft;
+    },
+  },
+  created() {
+    this.attachListeners();
   },
 };
 </script>
 
 
-<style>
-
+<style scoped lang="stylus">
+    .heading
+        color: #9C806B;
+        font-weight bold
+    img
+        height auto
+    .blackText
+        color: black;
 </style>
