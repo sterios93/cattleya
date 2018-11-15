@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 // Font awesome icons
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faDownload, faSquare, faBed, faBath, faBuilding, faAd, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import * as VueGoogleMaps from 'vue2-google-maps';
 
@@ -20,7 +20,7 @@ Vue.use(VueGoogleMaps, {
 });
 
 // Font awesome icons config
-library.add(faBars);
+library.add(faBars, faDownload, faSquare, faBed, faBath, faBuilding, faAd, faCheck);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
 
