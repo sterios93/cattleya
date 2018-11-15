@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Navigation></Navigation>
-    <router-view/>
+    <router-view class="routerContainer"/>
     <Footer></Footer>
   </div>
 </template>
@@ -19,5 +19,14 @@ export default {
 
 </script>
 <style lang="stylus">
-
+  body
+    display flex;
+    flex-direction column;
+    height 100vh;
+  #app
+    flex-grow 1;
+    display flex;
+    flex-direction:column;
+  .routerContainer
+    flex-grow 1;
 </style>
