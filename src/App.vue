@@ -29,4 +29,7 @@ export default {
     flex-direction:column;
   .routerContainer
     flex-grow 1;
+  a
+    text-decoration none!important;
+    color: black
 </style>

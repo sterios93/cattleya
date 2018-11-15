@@ -9,7 +9,7 @@
                         <h1 class="font-weight-bold">{{id.toLocaleUpperCase()}}</h1>
                     </div>
                     <div class="col-6 d-flex align-items-center justify-content-end">
-                        <a href="#">
+                        <a href="#" class="downloadButon">
                             <h5><font-awesome-icon icon="download"/> Download Plan</h5>
                         </a>
                     </div>
@@ -18,18 +18,18 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-column">
                         <div>
-                            <h5>Details</h5>
+                            <h5 class="bronzColor font-weight-bold">Details</h5>
                         </div>
                         <div class="row">
-                            <div class="col-6 col-lg-4">
+                            <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="square"/> 157 sq.m.</div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="bed"/> 1 Bedroom</div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="bath"/> 2 Bathrooms</div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="building"/> Floor 6/6</div>
-                            <div class="col-6 col-lg-4">
+                            <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="ad"/> Brick</div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-column">
                         <div>
-                            <h5>Description</h5>
+                            <h5 class="pt-4 bronzColor font-weight-bold">Description</h5>
                         </div>
                         <p>
                             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -55,19 +55,20 @@
                 <div class="row">
                     <div class="col-12 d-flex flex-column">
                         <div>
-                            <h5>Features</h5>
+                            <h5 class="pt-3 pb-1 bronzColor font-weight-bold">Features</h5>
                         </div>
                         <div class="row">
-                            <div class="col-6 col-lg-4">
-                                <font-awesome-icon icon="check"/> 157 sq.m.</div>
-                            <div class="col-6 col-lg-4">
-                                <font-awesome-icon icon="check"/> 1 Bedroom</div>
-                            <div class="col-6 col-lg-4">
-                                <font-awesome-icon icon="check"/> 2 Bathrooms</div>
-                            <div class="col-6 col-lg-4">
-                                <font-awesome-icon icon="check"/> Floor 6/6</div>
-                            <div class="col-6 col-lg-4">
-                                <font-awesome-icon icon="check"/> Brick</div>
+                            <div class="col-6 col-lg-4 py-2">
+                                <font-awesome-icon icon="check" class="bronzColor"/> 157 sq.m.</div>
+                            <div class="col-6 col-lg-4 py-2">
+                                <font-awesome-icon icon="check" class="bronzColor"/> 1 Bedroom</div>
+                            <div class="col-6 col-lg-4 py-2">
+                                <font-awesome-icon icon="check"
+                                                   class="bronzColor"/> 2 Bathrooms</div>
+                            <div class="col-6 col-lg-4 py-2">
+                                <font-awesome-icon icon="check" class="bronzColor"/> Floor 6/6</div>
+                            <div class="col-6 col-lg-4 py-2">
+                                <font-awesome-icon icon="check" class="bronzColor"/> Brick</div>
                         </div>
                     </div>
                 </div>
@@ -86,3 +87,12 @@ export default {
   ],
 };
 </script>
+
+<style scoped lang="stylus">
+    .bronzColor
+        color: #9c806b;
+    .downloadButon
+        background #9c806b;
+        padding: 11px 15px 5px 15px;
+        border-radius: 5px;
+</style>
