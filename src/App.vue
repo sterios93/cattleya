@@ -31,5 +31,5 @@ export default {
     flex-grow 1;
   a
     text-decoration none!important;
-    color: black
+    color: white
 </style>
