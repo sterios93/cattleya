@@ -5,10 +5,9 @@
             <nav class="navbar navbar-expand-lg navbar-light fixed-top"
                  :class="{notHomeNav: !isHome}" id="mainNav">
                 <div class="container">
-                    <a class="navbar-brand text-white"
-                       :class="{'text-dark': !isHome, 'text-white': isHome}" href="#">
-                        <router-link to="/">Cattleya</router-link>
-                    </a>
+                        <router-link to="/" class="navbar-brand text-white "
+                                :class="{'text-dark': !isHome,
+                                'text-white': isHome}">Cattleya</router-link>
                     <button class="navbar-toggler"
                             type="button" data-toggle="collapse"
                             data-target="#hamburgerMenu" aria-controls="hamburgerMenu"
@@ -18,10 +17,9 @@
                     <div class="collapse navbar-collapse" id="hamburgerMenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link text-center active"
-                                   :class="{'text-dark': !isHome, 'text-white': isHome}" href="#">
-                                    <router-link to="/apartments">Apartments</router-link>
-                                </a>
+                                <router-link to="/apartments" class="nav-link text-center "
+                                :class="{'text-dark': !isHome,
+                                'text-white': isHome}">Apartments</router-link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-center"
@@ -43,6 +41,7 @@
                                    :class="{'text-dark': !isHome, 'text-white': isHome}"
                                    href="#">Contact Us</a>
                             </li>
+
                         </ul>
                     </div>
                 </div>
