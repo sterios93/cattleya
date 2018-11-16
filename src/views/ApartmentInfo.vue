@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="container mt-5 mb-5">
         <div style="height: 70px"></div>
         <div class="row">
