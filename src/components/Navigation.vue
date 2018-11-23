@@ -26,22 +26,30 @@
                             <li class="nav-item">
                                 <a class="nav-link text-center"
                                    :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">Environment</a>
+                                   href="#">
+                                    <router-link to="/environment">Environment</router-link>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-center"
                                    :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">The Project</a>
+                                   href="#">
+                                    <router-link to="/project">The Project</router-link>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-center"
                                    :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">About Us</a>
+                                   href="#">
+                                    <router-link to="/about">About Us</router-link>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-center"
                                    :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">Contact Us</a>
+                                   href="#">
+                                    <router-link to="/contact">Contact Us</router-link>
+                                </a>
                             </li>
                         </ul>
                     </div>

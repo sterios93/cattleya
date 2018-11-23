@@ -5,8 +5,8 @@ import Apartments from './views/Apartments.vue';
 import ApartmentInfo from './views/ApartmentInfo.vue';
 import Environment from './views/Environment.vue';
 import Project from './views/Project.vue';
-import AboutUs from './views/AboutUs.vue';
-import ContactUs from './views/ContactUs.vue';
+import About from './views/About.vue';
+import Contact from './views/Contact.vue';
 
 Vue.use(Router);
 
@@ -43,12 +43,12 @@ export default new Router({
     {
       path: '/about',
       name: 'apartments',
-      component: AboutUs,
+      component: About,
     },
     {
       path: '/contact',
       name: 'apartments',
-      component: ContactUs,
+      component: Contact,
     },
   ],
 });
