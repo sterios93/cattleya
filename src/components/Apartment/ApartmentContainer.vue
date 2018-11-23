@@ -23,11 +23,11 @@
             <div class="col-10">
                 <Floor6 v-if="floors.f6"></Floor6>
                 <Floor5 v-if="floors.f5"></Floor5>
-                <Floor6 v-if="floors.f4"></Floor6>
-                <Floor6 v-if="floors.f3"></Floor6>
-                <Floor6 v-if="floors.f2"></Floor6>
-                <Floor6 v-if="floors.f1"></Floor6>
-                <Floor6 v-if="floors.fm1"></Floor6>
+                <Floor4 v-if="floors.f4"></Floor4>
+                <Floor3 v-if="floors.f3"></Floor3>
+                <Floor2 v-if="floors.f2"></Floor2>
+                <Floor1 v-if="floors.f1"></Floor1>
+                <FloorM1 v-if="floors.fm1"></FloorM1>
             </div>
         </div>
     </div>
@@ -36,11 +36,21 @@
 <script>
 import Floor6 from './Floor6.vue';
 import Floor5 from './Floor5.vue';
+import Floor4 from './Floor4.vue';
+import Floor3 from './Floor3.vue';
+import Floor2 from './Floor2.vue';
+import Floor1 from './Floor1.vue';
+import FloorM1 from './FloorM1.vue';
 
 export default {
   components: {
     Floor6,
     Floor5,
+    Floor4,
+    Floor3,
+    Floor2,
+    Floor1,
+    FloorM1,
   },
   data() {
     return {
