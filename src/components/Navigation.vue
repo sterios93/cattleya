@@ -21,7 +21,7 @@
                     <div class="collapse navbar-collapse" id="hamburgerMenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <span class="nav-link text-center active">
+                                <span class="nav-link text-center">
                                 <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
                                                  to="/apartments">Apartments</router-link>
                                 </span>
@@ -104,7 +104,7 @@ export default {
         -webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.27);
         -moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.27);
         box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.27);
-     ul li a.active /* Not working not taking precedence*/
+    a.router-link-active
         color: #9C806B!important;
 </style>
 
