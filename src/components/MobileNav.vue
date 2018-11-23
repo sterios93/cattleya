@@ -41,3 +41,7 @@
 </template>
 
 <script></script>
+<style scoped lang="stylus">
+        a.router-link-active
+            color: #9C806B!important;
+</style>

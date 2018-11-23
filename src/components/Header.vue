@@ -1,68 +1,140 @@
 <template>
         <!-- Page Header -->
-        <header class="masthead">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 ">
-                        <div class="site-heading mt-0 text-white">
-                            <h1>We are investors who turn ideas <br>
-                            into real-life projects.</h1>
-                            <button class="btn">Learn More</button>
+    <div>
+        <!--Large screens-->
+        <div class="d-none d-sm-block">
+            <header class="masthead">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="site-heading mt-0 text-white">
+                                <h1>We are investors who turn ideas <br>
+                                into real-life projects.</h1>
+                                <button class="btn">Learn More</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mx-0">
-                <div class="d-flex justify-content-end col-lg-12 px-0">
-                    <div class="bg-white d-flex col-xs-12 col-lg-6">
-                        <div class="row d-flex flex-wrap flex-column flex-sm-row col-12 mx-0">
-                            <div class="d-flex align-items-center
-                             justify-content-center col-xs-12 col-sm-4">
-                                <div class="row d-flex align-items-center
-                                 justify-content-center p-2">
-                                    <div class="col-6 d-flex justify-content-center">
+                <div class="row mx-0">
+                    <div class="d-flex justify-content-end col-lg-12 px-0">
+                        <div class="bg-white d-flex col-xs-12 col-lg-6">
+                            <div class="row d-flex flex-wrap flex-column flex-sm-row col-12 mx-0">
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-6 d-flex justify-content-center">
                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-0">Finished<br>projects</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="mb-0">Finished<br>projects</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center
-                             justify-content-center col-xs-12 col-sm-4">
-                                <div class="row d-flex align-items-center
-                                 justify-content-center p-2">
-                                    <div class="col-6 d-flex justify-content-center">
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-6 d-flex justify-content-center">
                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-0">Years on the<br>market</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="mb-0">Years on the<br>market</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex align-items-center
-                             justify-content-center col-xs-12 col-sm-4">
-                                <div class="row d-flex align-items-center
-                                 justify-content-center p-2">
-                                    <div class="col-6 d-flex justify-content-center">
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-6 d-flex justify-content-center">
                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p class="mb-0">Sold<br>apartments</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="mb-0">Sold<br>apartments</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </header>
+            </header>
+        </div>
+        <!--Mobile screens-->
+        <div class="d-sm-none">
+            <header class="mastheadMobile">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="site-heading mt-0 text-white">
+                                <h1>We are investors who turn ideas <br>
+                                    into real-life projects.</h1>
+                                <button class="btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mx-0">
+                    <div class="d-flex justify-content-end col-lg-12 px-0">
+                        <div class="bg-white d-flex col-xs-12 col-lg-6">
+                            <div class="row d-flex flex-wrap flex-column flex-sm-row col-12 mx-0">
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-6 d-flex justify-content-center">
+                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="mb-0">Finished<br>projects</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-6 d-flex justify-content-center">
+                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="mb-0">Years on the<br>market</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-6 d-flex justify-content-center">
+                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p class="mb-0">Sold<br>apartments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
 </template>
 
 <style scoped lang="stylus">
+    .mastheadMobile
+        background: url("../assets/floors/CattleyaHeaderMobile.jpg")
+        position: relative
+        background-size: cover
+        background-position-y: -260px
+        background-repeat: no-repeat
     .masthead
-        background: url("../assets/header-main.jpg")
+        background: url("../assets/floors/CattleyaHeaderMonitor.jpg")
         position: relative
         background-size: cover
         background-position: center bottom
