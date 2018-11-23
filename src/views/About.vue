@@ -1,6 +1,6 @@
 <template>
     <div class="mt-5">
-        <div class="mt-5"></div>
+        <div class="mt-0 mt-sm-5"></div>
         <p>About page mock</p>
     </div>
 </template>

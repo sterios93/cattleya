@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-5 mb-5">
-        <div style="height: 70px"></div>
+        <div class="d-none d-lg-block mt-5 mt-sm-0" style="height: 70px"></div>
         <div class="row">
             <div class="col-12 col-md-6">
                 <!--Apartment number-->
