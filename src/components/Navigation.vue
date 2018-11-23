@@ -18,10 +18,10 @@
                     <div class="collapse navbar-collapse" id="hamburgerMenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link text-center active"
+                                <p class="nav-link text-center active"
                                    :class="{'text-dark': !isHome, 'text-white': isHome}" href="#">
                                     <router-link to="/apartments">Apartments</router-link>
-                                </a>
+                                </p>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-center"

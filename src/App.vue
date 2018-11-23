@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Navigation></Navigation>
+    <Navigation class="d-none d-lg-block"></Navigation>
+    <MobileNav class="d-lg-none"></MobileNav>
     <router-view class="routerContainer"/>
     <Footer></Footer>
   </div>
@@ -9,11 +10,13 @@
 <script>
 import Navigation from './components/Navigation.vue';
 import Footer from './components/Footer.vue';
+import MobileNav from './components/MobileNav.vue';
 
 export default {
   components: {
     Navigation,
     Footer,
+    MobileNav,
   },
 };
 
