@@ -2,13 +2,16 @@
 <template>
     <!-- Navigation -->
     <div>
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+            <nav class="navbar navbar-expand-md navbar-light fixed-top"
                  :class="{notHomeNav: !isHome}" id="mainNav">
                 <div class="container">
-                    <a class="navbar-brand text-white"
-                       :class="{'text-dark': !isHome, 'text-white': isHome}" href="#">
-                        <router-link to="/">Cattleya</router-link>
-                    </a>
+                    <span class="navbar-brand text-white"
+                       :class="{'text-dark': !isHome, 'text-white': isHome}">
+                        <router-link to="/">
+                            <img v-if="isHome" src="../assets/floors/CattleyaLogoDarkBgd.png">
+                            <img v-if="!isHome" src="../assets/floors/CattleyaLogoWhiteBgd.png">
+                            </router-link>
+                    </span>
                     <button class="navbar-toggler"
                             type="button" data-toggle="collapse"
                             data-target="#hamburgerMenu" aria-controls="hamburgerMenu"
@@ -18,38 +21,34 @@
                     <div class="collapse navbar-collapse" id="hamburgerMenu">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <p class="nav-link text-center active"
-                                   :class="{'text-dark': !isHome, 'text-white': isHome}" href="#">
-                                    <router-link to="/apartments">Apartments</router-link>
-                                </p>
+                                <span class="nav-link text-center active">
+                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
+                                                 to="/apartments">Apartments</router-link>
+                                </span>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-center"
-                                   :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">
-                                    <router-link to="/environment">Environment</router-link>
-                                </a>
+                                <span class="nav-link text-center">
+                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
+                                                 to="/environment">Environment</router-link>
+                                </span>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-center"
-                                   :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">
-                                    <router-link to="/project">The Project</router-link>
-                                </a>
+                                <span class="nav-link text-center">
+                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
+                                                 to="/project">The Project</router-link>
+                                </span>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-center"
-                                   :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">
-                                    <router-link to="/about">About Us</router-link>
-                                </a>
+                                <span class="nav-link text-center">
+                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
+                                            to="/about">About Us</router-link>
+                                </span>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-center"
-                                   :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                   href="#">
-                                    <router-link to="/contact">Contact Us</router-link>
-                                </a>
+                                <span class="nav-link text-center">
+                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
+                                            to="/contact">Contact Us</router-link>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -66,11 +65,11 @@ export default {
     return {
       isHome: false,
       route: this.$route.name,
+      scrollTop: true,
     };
   },
   watch: {
     $route(to) {
-      console.log(to);
       if (to.name !== 'home') {
         this.isHome = false;
       } else {
@@ -80,6 +79,17 @@ export default {
   },
   created() {
     this.$route.name === 'home' ? this.isHome = true : this.isHome = false;
+    window.addEventListener('scroll', () => {
+      if (this.$route.name === 'home') {
+        if (window.scrollY < 5) {
+          this.scrollTop = true;
+          this.isHome = true;
+        } else {
+          this.scrollTop = false;
+          this.isHome = false;
+        }
+      }
+    });
   },
 };
 </script>
