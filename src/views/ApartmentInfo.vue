@@ -6,7 +6,7 @@
                 <!--Apartment number-->
                 <div class="row">
                     <div class="col-6 d-flex">
-                        <h1 class="font-weight-bold">{{id.toLocaleUpperCase()}}</h1>
+                        <h1 class="font-weight-bold">{{apartment.apartmentNum}}</h1>
                     </div>
                     <div class="col-6 d-flex align-items-center justify-content-end">
                         <a href="#" class="downloadButon">
@@ -24,13 +24,16 @@
                             <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="square"/> 157 sq.m.</div>
                             <div class="col-6 col-lg-4 py-2">
-                                <font-awesome-icon icon="bed"/> 1 Bedroom</div>
+                                <font-awesome-icon icon="bed"/>
+                                {{apartment.details.bedrooms }} Bedrooms</div>
                             <div class="col-6 col-lg-4 py-2">
-                                <font-awesome-icon icon="bath"/> 2 Bathrooms</div>
+                                <font-awesome-icon icon="bath"/>
+                                {{ apartment.details.bathrooms}} Bathrooms</div>
                             <div class="col-6 col-lg-4 py-2">
-                                <font-awesome-icon icon="building"/> Floor 6/6</div>
+                                <font-awesome-icon icon="building"/>
+                                Floor {{ apartment.details.floor}}/6</div>
                             <div class="col-6 col-lg-4 py-2">
-                                <font-awesome-icon icon="ad"/> Brick</div>
+                                <font-awesome-icon icon="ad"/> {{apartment.details.brick}}</div>
                         </div>
                     </div>
                 </div>
@@ -41,13 +44,7 @@
                             <h5 class="pt-4 bronzColor font-weight-bold">Description</h5>
                         </div>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                            been the industry's standard dummy text ever since the 1500s,
-                            a galley of type and scrambled it to make a type specimen book.
-                            ive centuries, but also the leap into electronic typesetting,
-                            unchanged. It was popularised in the 1960s with the release of
-                            Lorem Ipsum passages, and more recently with desktop publishing
-                            including versions of Lorem Ipsum.
+                            {{apartment.description}}
                         </p>
                     </div>
                 </div>
@@ -81,10 +78,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
-  props: [
-    'id',
-  ],
+  data() {
+    return {
+      apartment: {},
+    };
+  },
+  computed: {
+    ...mapGetters([
+      'getApartment',
+    ]),
+  },
+  beforeMount() {
+    const { id, floor } = this.$route.params;
+    this.apartment = this.getApartment(floor, id);
+  },
 };
 </script>
 

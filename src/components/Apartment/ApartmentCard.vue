@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-md-6 mt-5 mt-md-0" @click="checkApartment" id="a1">
+    <div class="col-12 col-md-6 mt-5 mt-md-0 mt-lg-5" @click="checkApartment" id="a1">
         <div class="col-12 col-md-10 apartmentCard p-0">
             <div class="position-relative">
                 <img class="w-100" src="../../assets/half.png" alt="Card image cap">
@@ -16,13 +16,10 @@
                     <p><font-awesome-icon icon="map-marker"/> Sofia - Student City</p>
                     <div class="row">
                         <div class="col-6 col-xl-4">
-                            <p>150 sq.m.</p>
+                            <p>{{floor.details.bedrooms}} Beedrooms</p>
                         </div>
                         <div class="col-6 col-xl-4">
-                            <p>3 Bedrooms</p>
-                        </div>
-                        <div class="col-6 col-xl-4">
-                            <p>2 Bathrooms</p>
+                            <p>{{floor.details.bathrooms}} Bathrooms</p>
                         </div>
                     </div>
                 </div>
@@ -33,6 +30,7 @@
 
 <script>
 export default {
+  props: ['floor'],
   data() {
     return {
       id: '',
@@ -40,8 +38,10 @@ export default {
   },
   methods: {
     checkApartment() {
-      const apartmentId = 1;
-      this.$router.push({ path: `/apartments/${apartmentId}`, params: { apartmentId } });
+      const apartmentId = this.floor.apartmentNum;
+      const { floor } = this.floor.details;
+
+      this.$router.push({ path: `/apartments/${floor}/${apartmentId}`, props: { apartment: floor } });
     },
   },
 };
