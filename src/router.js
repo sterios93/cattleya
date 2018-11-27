@@ -25,7 +25,7 @@ export default new Router({
       component: Apartments,
     },
     {
-      path: '/apartments/:id',
+      path: '/apartments/:floor/:id',
       props: true,
       name: 'apartmentInfo',
       component: ApartmentInfo,
