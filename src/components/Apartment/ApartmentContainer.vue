@@ -2,54 +2,62 @@
     <div class="container mt-lg-5 mb-5">
         <div class="row mt-lg-5 d-flex flex-column flex-md-row">
             <div class="col-12 col-md-2 d-none d-md-block">
-                <p>FLOOR</p>
-                <nav class="nav flex-row flex-md-column">
-                    <a class="nav-link floor-numbers text-left font-weight-bold active"
-                       @click="changeFloor" data-floor="6" href="#">6</a>
-                    <a class="nav-link floor-numbers text-left font-weight-bold"
-                       @click="changeFloor" data-floor="5" href="#">5</a>
-                    <a class="nav-link floor-numbers text-left font-weight-bold"
-                       @click="changeFloor" data-floor="4" href="#">4</a>
-                    <a class="nav-link floor-numbers text-left font-weight-bold"
-                       @click="changeFloor" data-floor="3" href="#">3</a>
-                    <a class="nav-link floor-numbers text-left font-weight-bold"
-                       @click="changeFloor" data-floor="2" href="#">2</a>
-                    <a class="nav-link floor-numbers text-left font-weight-bold"
-                       @click="changeFloor" data-floor="1" href="#">1</a>
-                    <a class="nav-link floor-numbers text-left font-weight-bold"
-                       @click="changeFloor" data-floor="m1" href="#">-1</a>
-                </nav>
+                <p>ЕТАЖ</p>
+                <ul class="nav flex-row flex-md-column">
+                    <li class="floor-numbers py-1 text-left font-weight-bold active"
+                       @click="changeFloor" data-floor="6">6</li>
+                    <li class="floor-numbers py-1 text-left font-weight-bold"
+                       @click="changeFloor" data-floor="5">5</li>
+                    <li class="floor-numbers py-1 text-left font-weight-bold"
+                       @click="changeFloor" data-floor="4" >4</li>
+                    <li class="floor-numbers py-1 text-left font-weight-bold"
+                       @click="changeFloor" data-floor="3" >3</li>
+                    <li class="floor-numbers py-1 text-left font-weight-bold"
+                       @click="changeFloor" data-floor="2" >2</li>
+                    <li class="floor-numbers py-1 text-left font-weight-bold"
+                       @click="changeFloor" data-floor="1">1</li>
+                    <li class="floor-numbers py-1 text-left font-weight-bold"
+                       @click="changeFloor" data-floor="0">-1</li>
+                </ul>
             </div>
             <div class="d-flex d-md-none row m-0">
-                <div class="col-6">
-                    <div class="dropdown col-10">
-                        <button class="btn btn-lg dropdown-toggle" type="button"
-                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
-                            Select Floor
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item text-center" href="#">-1</a>
-                            <a class="dropdown-item text-center" href="#">1</a>
-                            <a class="dropdown-item text-center" href="#">2</a>
-                            <a class="dropdown-item text-center" href="#">3</a>
-                            <a class="dropdown-item text-center" href="#">4</a>
-                            <a class="dropdown-item text-center" href="#">5</a>
-                            <a class="dropdown-item text-center" href="#">6</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-6 d-flex align-items-center justify-content-end">
+                <div class="col-12 col-sm-6 d-flex align-items-center justify-content-center mb-4">
                     <a href="#" class="downloadButon btn">
                         <h5 class="m-0"><font-awesome-icon icon="download"/> Floor Plan</h5>
                     </a>
                 </div>
+                <div class="col-12 col-sm-6 d-flex align-items-center justify-content-center">
+                    <div class="dropdown">
+                        <button class="btn btn-lg dropdown-toggle" type="button"
+                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                            Изберете етаж
+                        </button>
+                        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                            <li class="floor-numbers py-1 text-center font-weight-bold active"
+                                @click="changeFloor" data-floor="6">6</li>
+                            <li class="floor-numbers py-1 text-center font-weight-bold"
+                            @click="changeFloor" data-floor="5">5</li>
+                            <li class="floor-numbers py-1 text-center font-weight-bold"
+                            @click="changeFloor" data-floor="4" >4</li>
+                            <li class="floor-numbers py-1 text-center font-weight-bold"
+                            @click="changeFloor" data-floor="3" >3</li>
+                            <li class="floor-numbers py-1 text-center font-weight-bold"
+                            @click="changeFloor" data-floor="2" >2</li>
+                            <li class="floor-numbers py-1 text-center font-weight-bold"
+                            @click="changeFloor" data-floor="1">1</li>
+                            <li class="floor-numbers py-1 text-center font-weight-bold"
+                            @click="changeFloor" data-floor="0">-1</li>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <div class="col-12 col-md-10">
-                <div class="row">
+                <div class="row h-100 w-100 m-0">
                     <ApartmentCard v-for="(apartment, index) in apartmentsToShow"
-                                   :key="index" :floor="apartment"></ApartmentCard>
+                                   :key="index" :floor="apartment"
+                                  ></ApartmentCard>
                 </div>
             </div>
         </div>
@@ -85,6 +93,14 @@ export default {
      * @param {{}}e
      */
     changeFloor(e) {
+      const floors = document.querySelectorAll('.floor-numbers');
+      const currentFloor = e.target;
+      if (!currentFloor.classList.contains('active')) {
+        floors.forEach((floor) => {
+          floor.classList.remove('active');
+        });
+        currentFloor.classList.add('active');
+      }
       const { floor } = e.target.dataset;
       this.currentFloor = floor;
       this.apartmentsToShow = this.getApartments(floor);
@@ -107,4 +123,6 @@ export default {
         background #9c806b;
         /*padding: 11px 15px 5px 15px;*/
         border-radius: 5px;
+    .floor-numbers
+        cursor: pointer;
 </style>
