@@ -1,25 +1,35 @@
 <template>
     <div class="col-12 col-md-6 mt-5 mt-md-0 mt-lg-5" @click="checkApartment" id="a1">
+                <Spinner></Spinner>
         <div class="col-12 col-md-10 apartmentCard p-0">
             <div class="position-relative">
-                <img class="w-100" src="../../assets/half.png" alt="Card image cap">
-                <span class="position-absolute bg-info text-white p-1 mt-3 mr-3
+                <img class="w-100" :src="require(`../../assets/apartments/${floor.imageSrc}`)"
+                     alt="Card image cap">
+                <span v-if="floor.sold" class="position-absolute bg-danger text-white p-1 mt-3 ml-3
                  sellLabel font-weight-bold"
-                      style="top: 0; right: 0;">
-                    FOR SELL</span>
+                      style="top: 0; left: 0;">
+                    Продаден</span>
+                <span v-else class="position-absolute bg-info text-white p-1 mt-3 ml-3
+                 sellLabel font-weight-bold"
+                      style="top: 0; left: 0;">
+                    Свободен</span>
                 <span class="position-absolute font-weight-bold ml-2 priceLabel"
-                      style="bottom: 0; left: 0;">$ 150 000</span>
+                      style="bottom: 0; left: 0;">{{floor.apartmentNum}}</span>
             </div>
             <div class="descriptionBg p-2">
                 <div>
-                    <p>Modern and luxury apartment</p>
-                    <p><font-awesome-icon icon="map-marker"/> Sofia - Student City</p>
+                    <p>Модерен и луксозен апартамент.</p>
+                    <p><font-awesome-icon icon="map-marker"/> София, ж.к Студентски град.</p>
                     <div class="row">
                         <div class="col-6 col-xl-4">
-                            <p>{{floor.details.bedrooms}} Beedrooms</p>
+                            <p v-if="floor.details.bedrooms === 1">
+                                {{floor.details.bedrooms}} Спалня</p>
+                            <p v-else> {{floor.details.bedrooms}} Спални</p>
                         </div>
                         <div class="col-6 col-xl-4">
-                            <p>{{floor.details.bathrooms}} Bathrooms</p>
+                            <p v-if="floor.details.bathrooms === 1">
+                                {{floor.details.bathrooms}} Баня</p>
+                            <p v-else >{{floor.details.bathrooms}} Бани</p>
                         </div>
                     </div>
                 </div>
@@ -29,18 +39,26 @@
 </template>
 
 <script>
+import Spinner from '../Spinner.vue';
+
 export default {
+  components: {
+    Spinner,
+  },
   props: ['floor'],
   data() {
     return {
-      id: '',
+      image: '',
+      baseUrl: process.env.BASE_URL,
     };
+  },
+  computed: {
+
   },
   methods: {
     checkApartment() {
       const apartmentId = this.floor.apartmentNum;
       const { floor } = this.floor.details;
-
       this.$router.push({ path: `/apartments/${floor}/${apartmentId}`, props: { apartment: floor } });
     },
   },
