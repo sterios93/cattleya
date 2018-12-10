@@ -12,10 +12,9 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
-
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyB4zoOi_AiJ6y_c459Aica5WXmnQc31xq4',
+    key: 'AIzaSyBX5GhH6HqvkzK_i_o0BX15z5voegJd0Vg',
   },
 });
 
