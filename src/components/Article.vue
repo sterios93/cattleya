@@ -7,25 +7,18 @@
         <div class="row">
             <div class="col-12 col-sm-12 col-lg-7 d-flex justify-content-center"
                  v-bind:class="['order-2', { 'order-1' : picturePosition }]">
-                <img class="mw-100 " src="../assets/team.jpg"
-                     alt="some photo change it later">
+                <img class="mw-100 " :src="require(`../assets/${article.imageSrc}`)"
+                     style="object-fit:cover;" alt="some photo change it later">
             </div>
             <div class="col-12 col-sm-12 col-lg-5 d-flex mt-3 mt-lg-0
              flex-column justify-content-center"
                  v-bind:class="[ 'order-1', { 'order-2' : picturePosition }]">
-                <h1 class="heading text-center">About us ? </h1>
+                <h1 class="heading text-center">{{article.heading}}</h1>
                 <p >
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but also the leap
-                    into electronic typesetting, remaining essentially unchanged.
-                    It was popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages,
-                    and more recently with desktop publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.
+                  {{article.description}}
                 </p>
-                    <a href="#" class="blackText">See more</a>
+                  <router-link :to="to" v-if="isHome !==false"
+                               class="blackText">Вижте повече</router-link>
             </div>
         </div>
     </section>
@@ -33,7 +26,7 @@
 
 <script>
 export default {
-  props: ['pictureLeft'],
+  props: ['pictureLeft', 'article', 'isHome', 'to'],
   data() {
     return {
       picturePosition: null,
@@ -67,4 +60,5 @@ export default {
         height auto
     .blackText
         color: black;
+        font-wight bold;
 </style>
