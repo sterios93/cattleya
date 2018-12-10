@@ -16,10 +16,11 @@
 <script>
 
 export default {
+  props: ['center', 'marker'],
   data() {
     return {
-      center: { lat: 42.649435, lng: 23.354145 },
-      marker: { lat: 42.649435, lng: 23.354145 },
+      // center: { lat: 42.649435, lng: 23.354145 },
+      // marker: { lat: 42.649435, lng: 23.354145 },
       styles: [
         {
           featureType: 'all',

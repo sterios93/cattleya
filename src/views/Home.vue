@@ -21,7 +21,8 @@
             :isHome="true"
             :to="projectInfo.environment.route">
       </Article>
-      <google-map></google-map>
+      <google-map :center="{ lat: 42.649435, lng: 23.354145 }"
+                  :marker="{ lat: 42.649435, lng: 23.354145 }"></google-map>
     </main>
   </div>
 </template>
