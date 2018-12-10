@@ -99,10 +99,10 @@
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
                                         <div class="col-6 d-flex justify-content-center">
-                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
+                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">4</p>
                                         </div>
                                         <div class="col-6">
-                                            <p class="mb-0">Finished<br>projects</p>
+                                            <p class="mb-0">Продадени<br>апартамента</p>
                                         </div>
                                     </div>
                                 </div>
@@ -111,10 +111,10 @@
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
                                         <div class="col-6 d-flex justify-content-center">
-                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
+                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">22</p>
                                         </div>
                                         <div class="col-6">
-                                            <p class="mb-0">Years on the<br>market</p>
+                                            <p class="mb-0">Свободни<br>апартамента</p>
                                         </div>
                                     </div>
                                 </div>
@@ -123,10 +123,10 @@
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
                                         <div class="col-6 d-flex justify-content-center">
-                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
+                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">26</p>
                                         </div>
                                         <div class="col-6">
-                                            <p class="mb-0">Sold<br>apartments</p>
+                                            <p class="mb-0">Общо<br>апартамента</p>
                                         </div>
                                     </div>
                                 </div>
