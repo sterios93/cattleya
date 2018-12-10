@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import Vue from 'vue';
 import Vuex from 'vuex';
 
@@ -583,9 +584,12 @@ export default new Vuex.Store({
         route: '/about',
       },
     },
+    selectedFloor: 6,
   },
   mutations: {
-
+    changeSelectedFloor(state, floor) {
+      state.selectedFloor = floor;
+    },
   },
   actions: {
 
@@ -595,5 +599,6 @@ export default new Vuex.Store({
     getApartment: state => (floor, id) => state.apartments[floor][id.toLowerCase()],
     getProjectDescription: state => state.project,
     getAbout: state => state.about,
+    getFloorNumber: state => state.selectedFloor,
   },
 });
