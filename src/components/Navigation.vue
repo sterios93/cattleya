@@ -8,8 +8,8 @@
                     <span class="navbar-brand text-white"
                        :class="{'text-dark': !isHome, 'text-white': isHome}">
                         <router-link to="/">
-                            <img v-if="isHome" src="../assets/floors/CattleyaLogoDarkBgd.png">
-                            <img v-if="!isHome" src="../assets/floors/CattleyaLogoWhiteBgd.png">
+                            <img v-if="isHome" src="../assets/logo/CattleyaLogoDarkBgd.png">
+                            <img v-if="!isHome" src="../assets/logo/CattleyaLogoWhiteBgd.png">
                             </router-link>
                     </span>
                     <button class="navbar-toggler"
@@ -22,32 +22,37 @@
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <span class="nav-link text-center">
-                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                                 to="/apartments">Apartments</router-link>
+                                <router-link
+                                   :class="{'fontSettingsNotHome': !isHome, 'fontSettings': isHome}"
+                                                 to="/apartments">Апартаменти</router-link>
                                 </span>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link text-center">
-                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                                 to="/environment">Environment</router-link>
+                                <router-link
+                                  :class="{'fontSettingsNotHome': !isHome, 'fontSettings': isHome}"
+                                                 to="/project">Проектът</router-link>
                                 </span>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link text-center">
-                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                                 to="/project">The Project</router-link>
+                                <router-link
+                                   :class="{'fontSettingsNotHome': !isHome, 'fontSettings': isHome}"
+                                            to="/about">За Нас</router-link>
                                 </span>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link text-center">
-                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                            to="/about">About Us</router-link>
+                                <router-link
+                                   :class="{'fontSettingsNotHome': !isHome, 'fontSettings': isHome}"
+                                            to="/contact">Контакти</router-link>
                                 </span>
                             </li>
                             <li class="nav-item">
                                 <span class="nav-link text-center">
-                                <router-link :class="{'text-dark': !isHome, 'text-white': isHome}"
-                                            to="/contact">Contact Us</router-link>
+                                    <a href="tel:0888619844"
+                                :class="{'fontSettingsNotHome': !isHome, 'fontSettings': isHome}">
+                                        0888619844</a>
                                 </span>
                             </li>
                         </ul>
@@ -106,5 +111,15 @@ export default {
         box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.27);
     a.router-link-active
         color: #9C806B!important;
+    .nav-item :hover a
+        color: #9C806B!important;
+    .fontSettings
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #f2f2f2;
+    .fontSettingsNotHome
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            color: #2c2c2c;
 </style>
 
