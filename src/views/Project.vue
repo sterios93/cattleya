@@ -1,7 +1,7 @@
 <template>
-    <section class="container mt-lg-5">
+    <section class="mt-lg-5">
             <Spinner></Spinner>
-            <div class="mt-5">
+            <div class="mt-5 container">
                 <div class="mt-0 mt-sm-5 pt-lg-5"></div>
                 <Article v-bind:pictureLeft="false"
                          :article="projectInfo.introduction" :isHome="false"></Article>
@@ -44,8 +44,8 @@
                          :article="projectInfo.environment" :isHome="false"></Article>
                 <Article v-bind:pictureLeft="true"
                          :article="projectInfo.architectural" :isHome="false"></Article>
-                <google-map></google-map>
             </div>
+                <google-map></google-map>
     </section>
 </template>
 
