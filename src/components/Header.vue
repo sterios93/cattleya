@@ -9,38 +9,32 @@
                     <div class="row">
                         <div class="col-md-12 ">
                             <div class="site-heading mt-0 text-white">
-                                <h1>We are investors who turn ideas <br>
-                                into real-life projects.</h1>
-                                <button class="btn">Learn More</button>
+                                <h1>Инвеститори, които превръщат идеите<br>
+                                в реални проекти.</h1>
+                                <div>
+                                    <button class="btn mr-2">
+                                        <router-link to="/apartments">Апартаменти</router-link>
+                                     </button>
+                                    <button class="btn d-lg-none">
+                                        <router-link to="/project">Проектът</router-link>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mx-0">
                     <div class="d-flex justify-content-end col-lg-12 px-0">
-                        <div class="bg-white d-flex col-xs-12 col-lg-6">
+                        <div class="bg-white d-flex col-xs-12 col-lg-7">
                             <div class="row d-flex flex-wrap flex-column flex-sm-row col-12 mx-0">
                                 <div class="d-flex align-items-center
                                  justify-content-center col-xs-12 col-sm-4">
-                                    <div class="row d-flex align-items-center
-                                     justify-content-center p-2">
-                                        <div class="col-6 d-flex justify-content-center">
-                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">16</p>
+                            <div class="row d-flex align-items-center justify-content-center p-2">
+                                        <div class="col-4 d-flex justify-content-center pr-0">
+                                        <p class="stats-numbers font-weight-bold mr-0 mb-0">4</p>
                                         </div>
-                                        <div class="col-6">
-                                            <p class="mb-0">Finished<br>projects</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center
-                                 justify-content-center col-xs-12 col-sm-4">
-                                    <div class="row d-flex align-items-center
-                                     justify-content-center p-2">
-                                        <div class="col-6 d-flex justify-content-center">
-                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">5</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p class="mb-0">Years on the<br>market</p>
+                                        <div class="col-8">
+                                            <p class="mb-0">Продадени<br>апартамента</p>
                                         </div>
                                     </div>
                                 </div>
@@ -48,11 +42,23 @@
                                  justify-content-center col-xs-12 col-sm-4">
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
-                                        <div class="col-6 d-flex justify-content-center">
-                                        <p class="stats-numbers font-weight-bold mr-3 mb-0">93</p>
+                                        <div class="col-4 d-flex justify-content-center pr-0">
+                                        <p class="stats-numbers font-weight-bold mr-1 mb-0">22</p>
                                         </div>
-                                        <div class="col-6">
-                                            <p class="mb-0">Sold<br>apartments</p>
+                                        <div class="col-8">
+                                            <p class="mb-0">Свободни<br>апартамента</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center
+                                 justify-content-center col-xs-12 col-sm-4">
+                                    <div class="row d-flex align-items-center
+                                     justify-content-center p-2">
+                                        <div class="col-4 d-flex justify-content-center pr-0">
+                                        <p class="stats-numbers font-weight-bold mr-1 mb-0">26</p>
+                                        </div>
+                                        <div class="col-8">
+                                            <p class="mb-0">Общо<br>апартамента</p>
                                         </div>
                                     </div>
                                 </div>
@@ -72,7 +78,14 @@
                             <div class="site-heading mt-0 text-white">
                                 <h1>We are investors who turn ideas <br>
                                     into real-life projects.</h1>
-                                <button class="btn">Learn More</button>
+                                    <div>
+                                        <button class="btn mr-2">
+                                            <router-link to="/apartments">Апартаменти</router-link>
+                                        </button>
+                                        <button class="btn">
+                                            <router-link to="/project">Проектът</router-link>
+                                        </button>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -128,13 +141,13 @@
 
 <style scoped lang="stylus">
     .mastheadMobile
-        background: url("../assets/floors/CattleyaHeaderMobile.jpg")
+        background: url("../assets/header/CattleyaHeaderMobile.jpg")
         position: relative
         background-size: cover
         background-position-y: -260px
         background-repeat: no-repeat
     .masthead
-        background: url("../assets/floors/CattleyaHeaderMonitor.jpg")
+        background: url("../assets/header/CattleyaHeaderMonitor.jpg")
         position: relative
         background-size: cover
         background-position: center bottom
@@ -166,9 +179,9 @@
         .site-heading
             padding: 250px 0 100px 0
             h1
-                font-size: 45px
+                font-size: 43px;
         .stats-numbers
-            font-size 40px
+            font-size 52px
     @media (min-width: 992px)
         .site-heading
             padding: 200px 0 100px 0
