@@ -3,7 +3,6 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Apartments from './views/Apartments.vue';
 import ApartmentInfo from './views/ApartmentInfo.vue';
-import Environment from './views/Environment.vue';
 import Project from './views/Project.vue';
 import About from './views/About.vue';
 import Contact from './views/Contact.vue';
@@ -31,11 +30,6 @@ export default new Router({
       component: ApartmentInfo,
     },
     {
-      path: '/environment',
-      name: 'apartments',
-      component: Environment,
-    },
-    {
       path: '/project',
       name: 'apartments',
       component: Project,
@@ -51,4 +45,7 @@ export default new Router({
       component: Contact,
     },
   ],
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
 });
