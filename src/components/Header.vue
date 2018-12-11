@@ -11,13 +11,9 @@
                             <div class="site-heading mt-0 text-white">
                                 <h1>Инвеститори, които превръщат идеите<br>
                                 в реални проекти.</h1>
-                                <div>
-                                    <button class="btn mr-2">
-                                        <router-link to="/apartments">Апартаменти</router-link>
-                                     </button>
-                                    <button class="btn d-lg-none">
-                                        <router-link to="/project">Проектът</router-link>
-                                    </button>
+                                <div class="mt-3">
+                    <router-link to="/apartments" class="customButtons">Апартаменти</router-link>
+                <router-link to="/project" class="customButtons d-lg-none">Проектът</router-link>
                                 </div>
                             </div>
                         </div>
@@ -78,13 +74,9 @@
                             <div class="site-heading mt-0 text-white">
                                 <h1>Инвеститори, които превръщат идеите<br>
                                     в реални проекти.</h1>
-                                    <div>
-                                        <button class="btn mr-2">
-                                            <router-link to="/apartments">Апартаменти</router-link>
-                                        </button>
-                                        <button class="btn">
-                                            <router-link to="/project">Проектът</router-link>
-                                        </button>
+                                    <div class="mt-3">
+              <router-link to="/apartments" class="customButtons mr-3">Апартаменти</router-link>
+                   <router-link to="/project" class="customButtons d-lg-none">Проектът</router-link>
                                     </div>
                             </div>
                         </div>
@@ -140,6 +132,11 @@
 </template>
 
 <style scoped lang="stylus">
+    .customButtons
+        background #9c806b;
+        padding: 8px 15px 8px 15px;
+        border-radius: 5px;
+        color: white;
     .mastheadMobile
         background: url("../assets/header/CattleyaHeaderMobile.jpg")
         position: relative
