@@ -17,7 +17,7 @@
                     <li class="floor-numbers py-1 text-left font-weight-bold"
                        @click="changeFloor" data-floor="1">1</li>
                     <li class="floor-numbers py-1 text-left font-weight-bold"
-                       @click="changeFloor" data-floor="0">-1</li>
+                       @click="changeFloor" data-floor="0">0</li>
                 </ul>
             </div>
             <div class="d-flex d-md-none row m-0">
@@ -33,7 +33,7 @@
                                 aria-expanded="false">
                             Изберете етаж
                         </button>
-                        <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                        <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
                             <li class="floor-numbers py-1 text-center font-weight-bold active"
                                 @click="changeFloor" data-floor="6">6</li>
                             <li class="floor-numbers py-1 text-center font-weight-bold"
@@ -47,8 +47,8 @@
                             <li class="floor-numbers py-1 text-center font-weight-bold"
                             @click="changeFloor" data-floor="1">1</li>
                             <li class="floor-numbers py-1 text-center font-weight-bold"
-                            @click="changeFloor" data-floor="0">-1</li>
-                        </div>
+                            @click="changeFloor" data-floor="0">0</li>
+                        </ul>
                     </div>
 
                 </div>
@@ -119,6 +119,7 @@ export default {
       }
       const { floor } = e.target.dataset;
       this.apartmentsToShow = this.getApartments(floor);
+      console.log(this.apartmentsToShow);
       this.changeSelectedFloor(floor);
     },
   },

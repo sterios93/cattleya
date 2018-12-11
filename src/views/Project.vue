@@ -8,7 +8,7 @@
                 <div class="container m-0">
                     <div class="row mt-5">
                           <div class="flex-column col-lg-6">
-                            <p class="font-weight-bold">Сградата се състой от:</p>
+                            <p class="font-weight-bold">Сградата се състои от:</p>
                             <div class="d-flex row">
                                 <ul class="col-12 col-md-6 flex-column">
                                     <li>{{projectInfo.consist[0]}}</li>
@@ -30,9 +30,9 @@
                                     <li>{{projectInfo.location[0]}}</li>
                                     <li>{{projectInfo.location[1]}}</li>
                                     <li>{{projectInfo.location[2]}}</li>
-                                    <li>{{projectInfo.location[3]}}</li>
                                 </ul>
                                 <ul class="col-12 col-md-6 flex-column">
+                                    <li>{{projectInfo.location[3]}}</li>
                                     <li>{{projectInfo.location[4]}}</li>
                                     <li>{{projectInfo.location[5]}}</li>
                                 </ul>

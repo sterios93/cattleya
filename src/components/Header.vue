@@ -76,8 +76,8 @@
                     <div class="row">
                         <div class="col-md-12 ">
                             <div class="site-heading mt-0 text-white">
-                                <h1>We are investors who turn ideas <br>
-                                    into real-life projects.</h1>
+                                <h1>Инвеститори, които превръщат идеите<br>
+                                    в реални проекти.</h1>
                                     <div>
                                         <button class="btn mr-2">
                                             <router-link to="/apartments">Апартаменти</router-link>

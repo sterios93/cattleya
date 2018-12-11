@@ -5,8 +5,9 @@
             <div class="col-12 col-md-6 order-2 order-lg-1">
                 <!--Apartment number-->
                 <div class="row">
-                    <div class="col-6 d-flex">
-                        <h1 class="font-weight-bold">{{apartment.apartmentNum}}</h1>
+                    <div class="col-6 d-flex" >
+                        <h1 class="font-weight-bold"
+                            v-if="apartment.apartmentNum !== 'A0'">{{apartment.apartmentNum}}</h1>
                     </div>
                     <div class="col-6 d-flex align-items-center justify-content-end">
                         <a href="#" class="downloadButon">
@@ -15,7 +16,7 @@
                     </div>
                 </div>
                 <!--Apartment details -->
-                <div class="row">
+                <div class="row" v-if="apartment.apartmentNum !== 'A0'">
                     <div class="col-12 d-flex flex-column">
                         <div>
                             <h5 class="bronzColor font-weight-bold">Детайли</h5>
@@ -58,7 +59,7 @@
                     </div>
                 </div>
                 <!-- Features -->
-                <div class="row">
+                <div class="row" v-if="apartment.apartmentNum !== 'A0'">
                     <div class="col-12 d-flex flex-column">
                         <div>
                             <h5 class="pt-3 pb-1 bronzColor font-weight-bold">Допълнение</h5>
@@ -73,7 +74,7 @@
                             <div class="col-6 col-lg-4 py-2">
                                 <font-awesome-icon icon="check" class="bronzColor"/>
                                 {{apartment.features.parking}}</div>
-                            <div class="col-6 col-lg-4 py-2">
+                            <div class="col-6 col-lg-4 py-2" v-if="apartment.details.balcony">
                                 <font-awesome-icon icon="check" class="bronzColor"/>
                                 {{apartment.details.balcony}}</div>
                         </div>
