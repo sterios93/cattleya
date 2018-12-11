@@ -114,7 +114,6 @@ export default {
       }
       const { floor } = e.target.dataset;
       this.apartmentsToShow = this.getApartments(floor);
-      console.log(this.apartmentsToShow);
       this.changeSelectedFloor(floor);
     },
   },
