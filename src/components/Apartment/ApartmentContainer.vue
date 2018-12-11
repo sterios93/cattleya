@@ -21,11 +21,6 @@
                 </ul>
             </div>
             <div class="d-flex d-md-none row m-0">
-                <div class="col-12 col-sm-6 d-flex align-items-center justify-content-center mb-4">
-                    <a href="#" class="downloadButon btn">
-                        <h5 class="m-0"><font-awesome-icon icon="download"/> Floor Plan</h5>
-                    </a>
-                </div>
                 <div class="col-12 col-sm-6 d-flex align-items-center justify-content-center">
                     <div class="dropdown">
                         <button class="btn btn-lg dropdown-toggle" type="button"
