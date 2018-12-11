@@ -4,11 +4,16 @@
             <div class="row">
                 <div class="col-12 col-lg-8 d-flex justify-content-center justify-content-lg-start">
                     <nav class="nav">
-                        <a class="nav-link text-white" href="#">Apartments</a>
-                        <a class="nav-link text-white" href="#">Environment</a>
-                        <a class="nav-link text-white" href="#">The Project</a>
-                        <a class="nav-link text-white" href="#">About Us</a>
-                        <a class="nav-link text-white" href="#">Contact Us</a>
+                        <router-link
+                                class="nav-link text-white" to="/apartments">
+                            Апартаменти</router-link>
+                        <router-link
+                                class="nav-link text-white" to="/project">Проектът</router-link>
+                        <router-link
+                                class="nav-link text-white" to="/about">За нас</router-link>
+                        <router-link
+                                class="nav-link text-white" to="/contact">Контакти</router-link>
+                        <a  class="nav-link text-white"  href="tel:0888619844">0888619844</a>
                     </nav>
                 </div>
                 <div class="col-12 col-lg-4 d-flex
