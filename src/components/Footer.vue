@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-12 col-lg-4 d-flex
                 justify-content-center justify-content-lg-end align-items-center">
-                    <p class="m-0 text-white">Copyright 2018 - Created by Put our name here.</p>
+                    <p class="m-0 text-white copyright">Copyright 2018 - Ask the website owners.</p>
                 </div>
             </div>
         </div>
@@ -28,4 +28,6 @@
 <style scoped lang="stylus">
     .footer
         background #2c2c2c;
+    .copyright
+        font-size 10px;
 </style>
