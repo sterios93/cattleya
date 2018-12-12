@@ -13,7 +13,7 @@
             <div class="col-12 col-sm-12 col-lg-5 d-flex mt-3 mt-lg-0
              flex-column justify-content-center"
                  v-bind:class="[ 'order-1', { 'order-2' : picturePosition }]">
-                <h1 class="heading text-center">{{article.heading}}</h1>
+                <h1 class="heading text-left">{{article.heading}}</h1>
                 <p >
                   {{article.description}}
                 </p>

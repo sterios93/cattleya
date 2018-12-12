@@ -1,9 +1,9 @@
 <template>
     <div class="mt-5">
-        <div class="mt-5 mt-sm-5"></div>
+        <div class="mt-0 mt-sm-5"></div>
         <div class="container">
            <div>
-               <h1 class="heading text-center">Контакти</h1>
+               <h1 class="heading text-left">Контакти</h1>
                <p>Офис 1: град София, ул. 'Г. С. Раковски' 183, ет. 2, ап.
                    8, <a href="tel:0888619844">0888619844</a>,
                    <a href="tel:029800950">02/9800950</a>,
