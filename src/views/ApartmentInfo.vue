@@ -10,7 +10,7 @@
                             v-if="apartment.apartmentNum !== 'A0'">{{apartment.apartmentNum}}</h1>
                     </div>
                     <div class="col-6 d-flex align-items-center justify-content-end">
-                        <a :href="apartment.downloadPlanUrl" class="downloadButon">
+                        <a :href="apartment.downloadPlanUrl" download class="downloadButon">
                             <h5><font-awesome-icon icon="download"/> Свали план.</h5>
                         </a>
                     </div>
