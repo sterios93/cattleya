@@ -12,7 +12,8 @@
                                 <h1>Инвеститори, които превръщат идеите<br>
                                 в реални проекти.</h1>
                                 <div class="mt-3">
-                    <router-link to="/apartments" class="customButtons">Апартаменти</router-link>
+                    <router-link to="/apartments"
+                                 class="customButtons mr-3">Апартаменти</router-link>
                 <router-link to="/project" class="customButtons d-lg-none">Проектът</router-link>
                                 </div>
                             </div>
