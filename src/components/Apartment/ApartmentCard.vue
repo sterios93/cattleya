@@ -1,5 +1,5 @@
 <template>
-    <div class="col-12 col-md-6 mt-5 mt-md-0 mt-lg-5" @click="checkApartment" id="a1">
+    <div class="col-12 col-md-6 mt-5 mt-md-0 mt-lg-5" @click="checkApartment">
                 <Spinner></Spinner>
         <div class="col-12 col-md-10 apartmentCard p-0">
             <div class="position-relative">
@@ -13,8 +13,8 @@
                  sellLabel font-weight-bold"
                       style="top: 0; left: 0;">
                     Свободен</span>
-                <span class="position-absolute font-weight-bold ml-2 priceLabel"
-                      style="bottom: 0; left: 0;">{{floor.apartmentNum}}</span>
+                <span class="position-absolute font-weight-bold ml-2 priceLabel "
+                      style="bottom: 0; left: 0; color: #9c806b;">{{floor.apartmentNum}}</span>
             </div>
             <div class="descriptionBg p-2">
                 <div>

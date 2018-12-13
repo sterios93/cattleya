@@ -30,11 +30,13 @@
                                     <li>{{projectInfo.location[0]}}</li>
                                     <li>{{projectInfo.location[1]}}</li>
                                     <li>{{projectInfo.location[2]}}</li>
+                                    <li>{{projectInfo.location[6]}}</li>
                                 </ul>
                                 <ul class="col-12 col-md-6 flex-column">
                                     <li>{{projectInfo.location[3]}}</li>
                                     <li>{{projectInfo.location[4]}}</li>
                                     <li>{{projectInfo.location[5]}}</li>
+                                    <li>{{projectInfo.location[7]}}</li>
                                 </ul>
                             </div>
                           </div>
