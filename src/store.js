@@ -240,7 +240,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment12.pdf',
           imageSrc: 'apartment12.jpg',
-          sold: false,
+          sold: true,
         },
         a13: {
           apartmentNum: 'A13',
@@ -259,7 +259,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment13.pdf',
           imageSrc: 'apartment13.jpg',
-          sold: false,
+          sold: true,
         },
         a14: {
           apartmentNum: 'A14',
@@ -517,10 +517,11 @@ export default new Vuex.Store({
         a0: {
           apartmentNum: 'A0',
           details: {
-            bedrooms: 6,
-            bathrooms: 1,
             floor: 0,
             brick: 'Brick',
+            parkingSpaces: 9,
+            garages: 3,
+            basement: 26,
           },
           description: 'Подземният етаж разполага със 9 паркоместа,3 гаража и 26 мазета.',
           features: {

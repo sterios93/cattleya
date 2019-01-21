@@ -18,18 +18,36 @@
             </div>
             <div class="descriptionBg p-2">
                 <div>
-                    <p>Модерен и луксозен апартамент.</p>
+                    <p v-if="floor.details.floor !== 0">Модерен и луксозен апартамент.</p>
+                    <p v-else>Подземен етаж</p>
                     <p><font-awesome-icon icon="map-marker"/> София, ж.к Студентски град.</p>
                     <div class="row">
-                        <div class="col-6 col-xl-4">
+                        <div v-if="floor.details.bedrooms !== undefined"  class="col-6 col-xl-4">
                             <p v-if="floor.details.bedrooms === 1">
                                 {{floor.details.bedrooms}} Спалня</p>
                             <p v-else> {{floor.details.bedrooms}} Спални</p>
                         </div>
-                        <div class="col-6 col-xl-4">
+                        <div v-if="floor.details.bedrooms !== undefined" class="col-6 col-xl-4">
                             <p v-if="floor.details.bathrooms === 1">
                                 {{floor.details.bathrooms}} Баня</p>
                             <p v-else >{{floor.details.bathrooms}} Бани</p>
+                        </div>
+
+                         <div v-if="floor.details.parkingSpaces !== undefined"
+                              class="col-12 col-xl-4">
+                            <p v-if="floor.details.parkingSpaces === 1">
+                                {{floor.details.parkingSpaces}} Парко място</p>
+                            <p v-else> {{floor.details.parkingSpaces}} Парко места</p>
+                        </div>
+                        <div v-if="floor.details.garages !== undefined" class="col-6 col-xl-4">
+                            <p v-if="floor.details.garages === 1">
+                                {{floor.details.garages}} Гараж</p>
+                            <p v-else >{{floor.details.garages}} Гаража</p>
+                        </div>
+                        <div v-if="floor.details.basement !== undefined" class="col-6 col-xl-4">
+                            <p v-if="floor.details.basement === 1">
+                                {{floor.details.basement}} Мазе</p>
+                            <p v-else >{{floor.details.basement}} Мазета</p>
                         </div>
                     </div>
                 </div>
