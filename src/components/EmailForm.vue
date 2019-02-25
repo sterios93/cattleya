@@ -70,13 +70,13 @@
                 </label>
             </div>
         </div>
-        <button type="submit" class="btn customButtons col">Изпрати</button>
+        <button type="submit" id='submitButton' class="btn customButtons col">Изпрати</button>
 </form>
     </div>
 </template>
 
 <script>
-/* eslint-disable guard-for-in,no-restricted-syntax,consistent-return */
+/* eslint-disable guard-for-in,no-restricted-syntax,consistent-return,no-undef */
 
 import axios from 'axios';
 
@@ -120,6 +120,8 @@ export default {
               this.msg = '';
               this.gdpr = '';
               this.success = true;
+              ga('send', 'event', 'Lead', 'Submit', 'Form');
+              fbq('track', 'Lead');
             } else {
               this.resError = true;
             }
