@@ -75,8 +75,7 @@
     </div>
 </template>
 
-<script>
-/* eslint-disable guard-for-in,no-restricted-syntax,consistent-return,no-undef */
+<script>/* eslint-disable guard-for-in,no-restricted-syntax,consistent-return,no-undef */
 
 import axios from 'axios';
 
@@ -120,7 +119,12 @@ export default {
               this.msg = '';
               this.gdpr = '';
               this.success = true;
-              ga('send', 'event', 'Lead', 'Submit', 'Form');
+
+              gtag('event', 'Lead', {
+                event_category: 'Submit',
+                event_label: 'Form',
+                value: 1,
+              });
               fbq('track', 'Lead');
             } else {
               this.resError = true;
