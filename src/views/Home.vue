@@ -22,7 +22,9 @@
             :to="projectInfo.environment.route">
       </Article>
       <google-map :center="{ lat: 42.649435, lng: 23.354145 }"
-                  :marker="{ lat: 42.649435, lng: 23.354145 }"></google-map>
+                  :marker="{ lat: 42.649435, lng: 23.354145 }">
+      </google-map>
+      <email-form></email-form>
     </main>
   </div>
 </template>
@@ -33,6 +35,7 @@ import Header from '../components/Header.vue';
 import Article from '../components/Article.vue';
 import GoogleMap from '../components/Map.vue';
 import Spinner from '../components/Spinner.vue';
+import EmailForm from '../components/EmailForm.vue';
 
 export default {
   name: 'home',
@@ -41,6 +44,7 @@ export default {
     Article,
     GoogleMap,
     Spinner,
+    EmailForm,
   },
   data() {
     return {
