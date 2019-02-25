@@ -15,16 +15,19 @@
         </div>
         <google-map :center="{ lat: 42.669065, lng: 23.291006 }"
                     :marker="{ lat: 42.669065, lng: 23.291006 }"></google-map>
+        <email-form></email-form>
     </div>
 </template>
 
 <script>
 import GoogleMap from '../components/Map.vue';
+import EmailForm from '../components/EmailForm.vue';
 
 export default {
   name: 'project',
   components: {
     GoogleMap,
+    EmailForm,
   },
 };
 </script>
