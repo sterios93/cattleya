@@ -28,7 +28,7 @@
                                  justify-content-center col-xs-12 col-sm-4">
                             <div class="row d-flex align-items-center justify-content-center p-2">
                                         <div class="col-4 d-flex justify-content-center pr-0">
-                                        <p class="stats-numbers font-weight-bold mr-0 mb-0">6</p>
+                                        <p class="stats-numbers font-weight-bold mr-0 mb-0">9</p>
                                         </div>
                                         <div class="col-8">
                                             <p class="mb-0">Продадени<br>апартамента</p>
@@ -40,7 +40,7 @@
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
                                         <div class="col-4 d-flex justify-content-center pr-0">
-                                        <p class="stats-numbers font-weight-bold mr-1 mb-0">20</p>
+                                        <p class="stats-numbers font-weight-bold mr-1 mb-0">17</p>
                                         </div>
                                         <div class="col-8">
                                             <p class="mb-0">Свободни<br>апартамента</p>
@@ -92,7 +92,7 @@
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
                                         <div class="col-6 d-flex justify-content-center">
-                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">6</p>
+                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">9</p>
                                         </div>
                                         <div class="col-6">
                                             <p class="mb-0">Продадени<br>апартамента</p>
@@ -104,7 +104,7 @@
                                     <div class="row d-flex align-items-center
                                      justify-content-center p-2">
                                         <div class="col-6 d-flex justify-content-center">
-                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">20</p>
+                                         <p class="stats-numbers font-weight-bold mr-3 mb-0">17</p>
                                         </div>
                                         <div class="col-6">
                                             <p class="mb-0">Свободни<br>апартамента</p>
