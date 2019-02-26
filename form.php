@@ -27,7 +27,7 @@
     exit();
   }
 
-  $to = 'sterios.taskudis@gmail.com';
+  $to = 'cattleyaresidence.business@gmail.com';
   $subject = 'Cattleya form submission '.$email.' - '.$name;
   $message = '
   <html>
