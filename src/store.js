@@ -240,7 +240,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment12.pdf',
           imageSrc: 'apartment12.jpg',
-          sold: true,
+          sold: false,
         },
         a13: {
           apartmentNum: 'A13',
@@ -297,7 +297,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment15.pdf',
           imageSrc: 'apartment15.jpg',
-          sold: true,
+          sold: false,
         },
         a16: {
           apartmentNum: 'A16',
