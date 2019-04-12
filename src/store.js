@@ -278,7 +278,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment14.pdf',
           imageSrc: 'apartment14.jpg',
-          sold: false,
+          sold: true,
         },
         a15: {
           apartmentNum: 'A15',
