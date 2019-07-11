@@ -31,17 +31,17 @@ export default new Router({
     },
     {
       path: '/project',
-      name: 'apartments',
+      name: 'project',
       component: Project,
     },
     {
       path: '/about',
-      name: 'apartments',
+      name: 'about',
       component: About,
     },
     {
       path: '/contact',
-      name: 'apartments',
+      name: 'contact',
       component: Contact,
     },
   ],
