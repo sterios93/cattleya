@@ -597,9 +597,11 @@ export default new Vuex.Store({
       },
     },
     selectedFloor: 6,
-    soldApartments: 10,
-    freeApartments: 16,
-    totalApartments: 26,
+    salesStats: {
+      soldApartments: 10,
+      freeApartments: 16,
+      totalApartments: 26,
+    },
     map: {
       center: {
         lat: 42.649435,
@@ -626,11 +628,7 @@ export default new Vuex.Store({
     getAbout: state => state.about,
     getFloorNumber: state => state.selectedFloor,
     getContacts: state => state.contacts,
-    getSalesStats: state => ({
-      soldApartments: state.soldApartments,
-      freeApartments: state.freeApartments,
-      totalApartments: state.totalApartments,
-    }),
+    getSalesStats: state => state.salesStats,
     getMapInfo: state => ({center: state.map.center, marker: state.map.marker})
   },
 });
