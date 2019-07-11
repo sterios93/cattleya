@@ -13,8 +13,10 @@
                    ЕООД, <a href="tel:0888241248">0888241248</a></p>
            </div>
         </div>
-        <google-map :center="{ lat: 42.669065, lng: 23.291006 }"
-                    :marker="{ lat: 42.669065, lng: 23.291006 }"></google-map>
+        <google-map 
+            :center="getMapInfo.center"
+            :marker="getMapInfo.marker">
+        </google-map>
         <email-form></email-form>
     </div>
 </template>
@@ -22,6 +24,7 @@
 <script>
 import GoogleMap from '../components/Map.vue';
 import EmailForm from '../components/EmailForm.vue';
+import {mapGetters} from "vuex";
 
 export default {
   name: 'project',
@@ -29,6 +32,14 @@ export default {
     GoogleMap,
     EmailForm,
   },
+  data() {
+      return {}
+  },
+  computed: {
+      ...mapGetters([
+          'getMapInfo'
+      ])
+  }
 };
 </script>
 

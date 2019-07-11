@@ -600,6 +600,16 @@ export default new Vuex.Store({
     soldApartments: 10,
     freeApartments: 16,
     totalApartments: 26,
+    map: {
+      center: {
+        lat: 42.649435,
+        lng: 23.354145 
+      },
+      marker: {
+        lat: 42.649435,
+        lng: 23.354145
+      }
+    }
   },
   mutations: {
     changeSelectedFloor(state, floor) {
@@ -621,5 +631,6 @@ export default new Vuex.Store({
       freeApartments: state.freeApartments,
       totalApartments: state.totalApartments,
     }),
+    getMapInfo: state => ({center: state.map.center, marker: state.map.marker})
   },
 });

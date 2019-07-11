@@ -4,25 +4,26 @@
     <HeaderContainer/>
     <main>
       <Article
-            v-bind:pictureLeft="true"
-            :article="about.team"
-            :isHome="true"
-            :to="about.team.route">
+        v-bind:pictureLeft="true"
+        :article="about.team"
+        :isHome="true"
+        :to="about.team.route">
       </Article>
       <Article
-            v-bind:pictureLeft="false"
-            :article="projectInfo.environment"
-            :isHome="true"
-            :to="projectInfo.environment.route">
+        v-bind:pictureLeft="false"
+        :article="projectInfo.environment"
+        :isHome="true"
+        :to="projectInfo.environment.route">
       </Article>
       <Article
-            v-bind:pictureLeft="true"
-            :article="projectInfo.introduction"
-            :isHome="true"
-            :to="projectInfo.environment.route">
+        v-bind:pictureLeft="true"
+        :article="projectInfo.introduction"
+        :isHome="true"
+        :to="projectInfo.environment.route">
       </Article>
-      <google-map :center="{ lat: 42.649435, lng: 23.354145 }"
-                  :marker="{ lat: 42.649435, lng: 23.354145 }">
+      <google-map 
+        :center="getMapInfo.center"
+        :marker="getMapInfo.marker">
       </google-map>
       <email-form></email-form>
     </main>
@@ -56,6 +57,7 @@ export default {
     ...mapGetters([
       'getProjectDescription',
       'getAbout',
+      'getMapInfo'
     ]),
   },
   beforeMount() {
