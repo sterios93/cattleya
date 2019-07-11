@@ -12,22 +12,21 @@
 <script>
 import HeaderDesktop from './HeaderDesktop';
 import HeaderMobile from './HeaderMobile';
-import { mapGetters } from 'vuex';
 
 export default {
   components: {
     HeaderDesktop,
     HeaderMobile,
   },
-  data() {
-    return {
-
-    };
-  },
-  computed: {
-    ...mapGetters({
-      salesStats: 'getSalesStats',
-    }),
+  props: {
+    salesStats: {
+      type: Object,
+      default: {
+        soldApartments: String,
+        freeApartments: String,
+        totalApartments: String,
+      }
+    }
   },
 };
 </script>

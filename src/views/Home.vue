@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <Spinner></Spinner>
-    <HeaderContainer/>
+    <HeaderContainer 
+      :salesStats="getSalesStats"
+      />
     <main>
       <Article
         v-bind:pictureLeft="true"
@@ -57,7 +59,8 @@ export default {
     ...mapGetters([
       'getProjectDescription',
       'getAbout',
-      'getMapInfo'
+      'getMapInfo',
+      'getSalesStats',
     ]),
   },
   beforeMount() {
