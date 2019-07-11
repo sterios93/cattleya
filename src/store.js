@@ -597,6 +597,7 @@ export default new Vuex.Store({
       },
     },
     selectedFloor: 6,
+    totalFloors: 6,
     salesStats: {
       soldApartments: 10,
       freeApartments: 16,
@@ -614,12 +615,10 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    changeSelectedFloor(state, floor) {
-      state.selectedFloor = floor;
-    },
+    CHANGE_SELECTED_FLOOR: (state, payload) => state.selectedFloor = payload,
   },
   actions: {
-
+    changeSelectedFloor: ({ commit }, payload) => commit('CHANGE_SELECTED_FLOOR', payload)
   },
   getters: {
     getApartments: state => floor => state.apartments[floor],
@@ -629,6 +628,7 @@ export default new Vuex.Store({
     getFloorNumber: state => state.selectedFloor,
     getContacts: state => state.contacts,
     getSalesStats: state => state.salesStats,
-    getMapInfo: state => ({center: state.map.center, marker: state.map.marker})
+    getMapInfo: state => ({center: state.map.center, marker: state.map.marker}),
+    getFloorsCount: state => state.totalFloors,
   },
 });
