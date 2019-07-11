@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <Spinner></Spinner>
-    <Header></Header>
+    <HeaderContainer/>
     <main>
       <Article
             v-bind:pictureLeft="true"
@@ -31,7 +31,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import Header from '../components/Header.vue';
+import HeaderContainer from '../components/Header/HeaderContainer';
 import Article from '../components/Article.vue';
 import GoogleMap from '../components/Map.vue';
 import Spinner from '../components/Spinner.vue';
@@ -40,7 +40,7 @@ import EmailForm from '../components/EmailForm.vue';
 export default {
   name: 'home',
   components: {
-    Header,
+    HeaderContainer,
     Article,
     GoogleMap,
     Spinner,

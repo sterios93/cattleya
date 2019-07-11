@@ -597,6 +597,9 @@ export default new Vuex.Store({
       },
     },
     selectedFloor: 6,
+    soldApartments: 10,
+    freeApartments: 16,
+    totalApartments: 26,
   },
   mutations: {
     changeSelectedFloor(state, floor) {
@@ -613,5 +616,10 @@ export default new Vuex.Store({
     getAbout: state => state.about,
     getFloorNumber: state => state.selectedFloor,
     getContacts: state => state.contacts,
+    getSalesStats: state => ({
+      soldApartments: state.soldApartments,
+      freeApartments: state.freeApartments,
+      totalApartments: state.totalApartments,
+    }),
   },
 });
