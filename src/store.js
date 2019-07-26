@@ -599,8 +599,8 @@ export default new Vuex.Store({
     selectedFloor: 6,
     totalFloors: 6,
     salesStats: {
-      soldApartments: 10,
-      freeApartments: 16,
+      soldApartments: 11,
+      freeApartments: 15,
       totalApartments: 26,
     },
     map: {
