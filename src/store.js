@@ -524,6 +524,12 @@ export default new Vuex.Store({
             basement: 26,
           },
           description: 'Подземният етаж разполага със 9 паркоместа,3 гаража и 26 мазета.',
+          basementInfo: {
+            sold: `1,2,3,8,9,10,11,14,21,23.`,
+          },
+          parkingSpaces: {
+            sold: `3,5,8,9.`
+          },
           features: {
             controlledAccess: 'Контролиран достъп',
             elevator: 'Асансьор',

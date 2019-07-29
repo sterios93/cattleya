@@ -53,9 +53,13 @@
                         <p v-if="apartment.sold"
                            class="font-weight-bold p-0 m-0" style="text-decoration: underline;">
                             ПРОДАДЕН</p>
-                        <p>
-                            {{apartment.description}}
-                        </p>
+                        <p> {{apartment.description}}</p>
+                        <div v-if="apartment.basementInfo">
+                            <p>Продадени мазета: {{ apartment.basementInfo.sold }}</P>
+                        </div>
+                        <div v-if="apartment.parkingSpaces">
+                            <p>Продадени паркоместа: {{ apartment.parkingSpaces.sold }}</P>
+                        </div>
                     </div>
                 </div>
                 <!-- Features -->
