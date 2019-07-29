@@ -4,11 +4,20 @@
             <div class="col-12 col-lg-7 d-flex justify-content-center"
                  v-bind:class="['order-2', { 'order-1' : picturePosition }]">
                 <img 
+                  v-if="!isVideo"
                   class="mw-100 " 
                   :src="require(`../assets/${article.imageSrc}`)"
                   style="object-fit:cover;" 
                   alt="some photo change it later"
                   >
+                  <video
+                   width="100%" 
+                   height="100%"
+                   v-else
+                   controls>
+                    <source src="../../src/assets/videos/test.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div class="col-12 col-lg-5 d-flex mt-3 mt-lg-0 flex-column justify-content-center"
                  v-bind:class="[ 'order-1', { 'order-2' : picturePosition }]">
@@ -27,7 +36,7 @@
 
 <script>
 export default {
-  props: ['pictureLeft', 'article', 'isHome', 'to'],
+  props: ['pictureLeft', 'article', 'isHome', 'to', 'isVideo'],
   data() {
     return {
       picturePosition: null,

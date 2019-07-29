@@ -9,7 +9,8 @@
         v-bind:pictureLeft="true"
         :article="about.team"
         :isHome="true"
-        :to="about.team.route">
+        :to="about.team.route"
+        :isVideo="true">
       </Article>
       <Article
         v-bind:pictureLeft="false"
