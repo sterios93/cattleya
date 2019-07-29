@@ -13,6 +13,7 @@
                   <video
                    width="100%" 
                    height="100%"
+                   poster="../assets/header/CattleyaHeaderMonitor.jpg"
                    v-else
                    controls>
                     <source src="../../src/assets/videos/test.mp4" type="video/mp4">
