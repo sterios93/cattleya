@@ -528,7 +528,7 @@ export default new Vuex.Store({
             sold: `1,2,3,8,9,10,11,14,21,23.`,
           },
           parkingSpaces: {
-            sold: `3,5,8,9.`
+            free: `1,13.`
           },
           features: {
             controlledAccess: 'Контролиран достъп',

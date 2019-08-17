@@ -58,7 +58,7 @@
                             <p>Продадени мазета: {{ apartment.basementInfo.sold }}</P>
                         </div>
                         <div v-if="apartment.parkingSpaces">
-                            <p>Продадени паркоместа: {{ apartment.parkingSpaces.sold }}</P>
+                            <p>Свободни паркоместа: {{ apartment.parkingSpaces.free }}</P>
                         </div>
                     </div>
                 </div>
