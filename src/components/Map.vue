@@ -7,8 +7,8 @@
                 style="width:100%;  height: 400px;"
         >
             <gmap-marker
-                    :position="marker"
-            ></gmap-marker>
+             :position="marker" 
+             />
         </gmap-map>
     </div>
 </template>
@@ -16,11 +16,24 @@
 <script>
 
 export default {
-  props: ['center', 'marker'],
+  props: {
+    center: {
+      type: Object,
+      default: {
+        lat: '',
+        lng: '',
+      }
+    },
+    marker: {
+      type: Object,
+      default: {
+        lat: '',
+        lng: '',
+      }
+    },
+  },
   data() {
     return {
-      // center: { lat: 42.649435, lng: 23.354145 },
-      // marker: { lat: 42.649435, lng: 23.354145 },
       styles: [
         {
           featureType: 'all',

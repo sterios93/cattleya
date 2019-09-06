@@ -1,43 +1,41 @@
 <template>
     <div class="vld-parent">
-        <loading :active.sync="isLoading"
-        :color="'#9C806B'"
-        :can-cancel="true"
-        :on-cancel="onCancel"
-        :is-full-page="fullPage"></loading>
+        <loading
+          :active.sync="isLoading"
+          :color="'#9C806B'"
+          :can-cancel="true"
+          :is-full-page="fullPage"
+        />
     </div>
 </template>
 
 <script>
-// Import component
 import Loading from 'vue-loading-overlay';
-// Import stylesheet
 import 'vue-loading-overlay/dist/vue-loading.css';
 
 export default {
+  components: {
+    Loading,
+  },
   data() {
     return {
       isLoading: false,
       fullPage: true,
     };
   },
-  components: {
-    Loading,
+  mounted() {
+    this.showLoader();
   },
   methods: {
-    doAjax() {
+    showLoader() {
       this.isLoading = true;
-      // simulate AJAX
-      setTimeout(() => {
-        this.isLoading = false;
-      }, 500);
+      setTimeout(
+        () => {
+          this.isLoading = false;
+        }
+        , 500,
+      );
     },
-    onCancel() {
-      console.log('User cancelled the loader.');
-    },
-  },
-  mounted() {
-    this.doAjax();
   },
 };
 </script>

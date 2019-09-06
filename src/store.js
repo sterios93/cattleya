@@ -297,7 +297,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment15.pdf',
           imageSrc: 'apartment15.jpg',
-          sold: false,
+          sold: true,
         },
         a16: {
           apartmentNum: 'A16',
@@ -375,7 +375,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment7.pdf',
           imageSrc: 'apartment7.jpg',
-          sold: false,
+          sold: true,
         },
         a8: {
           apartmentNum: 'A8',
@@ -472,7 +472,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment2.pdf',
           imageSrc: 'apartment2.jpg',
-          sold: false,
+          sold: true,
         },
         a3: {
           apartmentNum: 'A3',
@@ -524,6 +524,12 @@ export default new Vuex.Store({
             basement: 26,
           },
           description: 'Подземният етаж разполага със 9 паркоместа,3 гаража и 26 мазета.',
+          basementInfo: {
+            sold: `1,2,3,8,9,10,11,14,21,23.`,
+          },
+          parkingSpaces: {
+            free: `1,13.`
+          },
           features: {
             controlledAccess: 'Контролиран достъп',
             elevator: 'Асансьор',
@@ -585,7 +591,7 @@ export default new Vuex.Store({
     about: {
       team: {
         description: 'Вилидж Релакс ЕООД е активен инвеститор в строителство, директно участващ във всичките етапи и процеси от реализирането на своите проекти. Чрез изградената широка мрежа от бизнес партньорства с някои от лидерите в индустрията, разпростиращи се в секторите архитектура и дизайн; строеж и конструкция, продажба и промотиране Вилидж Релакс ЕООД успява да оптимизира ефективността на цялостния процес, както и да осигури най-високо качество на предлаганите от нас услуги и продукти. Ние ще Ви помогнем да направите вашият мечтан дом реалност. Споделете с нас Вашите идеи и гледайте как нашият екип им вдъхва живот.',
-        imageSrc: 'about/team.jpg',
+        imageSrc: 'about/team2.jpg',
         heading: 'За нас',
         route: '/about',
       },
@@ -597,14 +603,28 @@ export default new Vuex.Store({
       },
     },
     selectedFloor: 6,
+    totalFloors: 6,
+    salesStats: {
+      soldApartments: 14,
+      freeApartments: 12,
+      totalApartments: 26,
+    },
+    map: {
+      center: {
+        lat: 42.649435,
+        lng: 23.354145 
+      },
+      marker: {
+        lat: 42.649435,
+        lng: 23.354145
+      }
+    }
   },
   mutations: {
-    changeSelectedFloor(state, floor) {
-      state.selectedFloor = floor;
-    },
+    CHANGE_SELECTED_FLOOR: (state, payload) => state.selectedFloor = payload,
   },
   actions: {
-
+    changeSelectedFloor: ({ commit }, payload) => commit('CHANGE_SELECTED_FLOOR', payload)
   },
   getters: {
     getApartments: state => floor => state.apartments[floor],
@@ -613,5 +633,8 @@ export default new Vuex.Store({
     getAbout: state => state.about,
     getFloorNumber: state => state.selectedFloor,
     getContacts: state => state.contacts,
+    getSalesStats: state => state.salesStats,
+    getMapInfo: state => ({center: state.map.center, marker: state.map.marker}),
+    getFloorsCount: state => state.totalFloors,
   },
 });

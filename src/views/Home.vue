@@ -1,28 +1,32 @@
 <template>
   <div class="home">
     <Spinner></Spinner>
-    <Header></Header>
+    <HeaderContainer 
+      :salesStats="getSalesStats"
+      />
     <main>
       <Article
-            v-bind:pictureLeft="true"
-            :article="about.team"
-            :isHome="true"
-            :to="about.team.route">
+        v-bind:pictureLeft="true"
+        :article="about.team"
+        :isHome="true"
+        :to="about.team.route"
+        :isVideo="true">
       </Article>
       <Article
-            v-bind:pictureLeft="false"
-            :article="projectInfo.environment"
-            :isHome="true"
-            :to="projectInfo.environment.route">
+        v-bind:pictureLeft="false"
+        :article="projectInfo.environment"
+        :isHome="true"
+        :to="projectInfo.environment.route">
       </Article>
       <Article
-            v-bind:pictureLeft="true"
-            :article="projectInfo.introduction"
-            :isHome="true"
-            :to="projectInfo.environment.route">
+        v-bind:pictureLeft="true"
+        :article="projectInfo.introduction"
+        :isHome="true"
+        :to="projectInfo.environment.route">
       </Article>
-      <google-map :center="{ lat: 42.649435, lng: 23.354145 }"
-                  :marker="{ lat: 42.649435, lng: 23.354145 }">
+      <google-map 
+        :center="getMapInfo.center"
+        :marker="getMapInfo.marker">
       </google-map>
       <email-form></email-form>
     </main>
@@ -31,7 +35,7 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import Header from '../components/Header.vue';
+import HeaderContainer from '../components/Header/HeaderContainer';
 import Article from '../components/Article.vue';
 import GoogleMap from '../components/Map.vue';
 import Spinner from '../components/Spinner.vue';
@@ -40,7 +44,7 @@ import EmailForm from '../components/EmailForm.vue';
 export default {
   name: 'home',
   components: {
-    Header,
+    HeaderContainer,
     Article,
     GoogleMap,
     Spinner,
@@ -56,6 +60,8 @@ export default {
     ...mapGetters([
       'getProjectDescription',
       'getAbout',
+      'getMapInfo',
+      'getSalesStats',
     ]),
   },
   beforeMount() {
