@@ -110,7 +110,7 @@ export default {
           dataForm.append(key, payload[key]);
         }
 
-        axios.post('http://cattleyaresidence.com/form.php', dataForm)
+        axios.post('https://cattleyaresidence.com/form.php', dataForm)
           .then((res) => {
             if (res.data.status && res.data.status === '200') {
               this.name = '';
