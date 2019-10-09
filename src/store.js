@@ -240,7 +240,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment12.pdf',
           imageSrc: 'apartment12.jpg',
-          sold: false,
+          sold: true,
         },
         a13: {
           apartmentNum: 'A13',
@@ -356,7 +356,7 @@ export default new Vuex.Store({
           },
           downloadPlanUrl: '/downloads/apartment6.pdf',
           imageSrc: 'apartment6.jpg',
-          sold: false,
+          sold: true,
         },
         a7: {
           apartmentNum: 'A7',
@@ -605,8 +605,8 @@ export default new Vuex.Store({
     selectedFloor: 6,
     totalFloors: 6,
     salesStats: {
-      soldApartments: 14,
-      freeApartments: 12,
+      soldApartments: 16,
+      freeApartments: 10,
       totalApartments: 26,
     },
     map: {
